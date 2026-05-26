@@ -6,13 +6,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-
-/* FON RANGI SHU YERDA O'ZGARDI (#2b1018) */
 html,body{
     width:100%;
     height:100%;
     overflow:hidden;
-    background:#611028; 
+    background:#2b1018; /* Mana shu yerda rang o'zgardi */
     font-family:'Cormorant Garamond',Georgia,serif;
     color:#000000cb
 }
@@ -84,13 +82,15 @@ html,body{
   <div class="letter">
     <div class="letter-name">Sevgili Bayan Mashhura,</div>
     <div class="letter-text">
-    Hayatım boyunca birçok insanla karşılaştım. Bazıları çok güzeldi, bazıları nazikti, bazıları ise bir fırtınayı bile dindirecek kadar sıcak bir kalbe sahipti. Ama tüm bu nadir özellikleri tek bir kalpte taşıyan tek kişi sensin. Sana sormak istediğim bir şey var. Bu anın çok erken olup olmadığını, bu sözlerin fazla cesur kaçıp kaçmadığını ya da bunları sormayı hak edip etmediğimi bilmiyorum. Ama biliyorum ki sessiz kalmak hayatımdaki en büyük pişmanlığım olurdu.
-      <br>Bu yüzden...<br>
+    Hayatım boyunca birçok insanla karşılaştım. Bazıları çok güzeldi, bazıları nazikti, bazıları ise bir fırtınayı bile dindirecek kadar sıcak bir kalbe sahipti. Ama tüm bu nadir özellikleri tek bir kalpte taşıyan tek kişi sensin. Sana sormak istediğim bir şey var. Bu anın çok erken olup olmadığını, bu sözlerin fazla cesur kaçıp kaçmadığını ya da bunları sormayı hak edip etmediğimi bilmiyorum. Ama biliyorum ki sessiz kalmak hayatımdaki en büyük pişmanlığım olurdu. 
+
+<br>Bu yüzden…<br>
     </div>
   </div>
   <div class="question">Beni seviyor musun?</div>
   <div class="btn-row">
     <button class="btn-yes" id="btnYes" onclick="sayYes()">Evet</button>
+  </div>
 </div>
 
 <button id="btnNo">Hayır</button>
@@ -99,20 +99,22 @@ html,body{
 <div class="scene" id="scene3">
   <div class="yes-line"></div>
   <div class="yes-sub">
-  Ben de seni seviyorum
+    Ben de seni seviyorum
   </div>
+
   <!-- RASM — matndan pastda -->
-  <div> <img src="mm.jpg" alt="" style="
-    width: 180px;
-    height: 180px;
+  <video src="mmm.webm" style="
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 12px;
     margin-top: 1.5rem;
-    opacity: 0.85;
+    opacity: 0.9;
     border: 1px solid rgba(220, 160, 180, 0.3);
     animation: fadeUp 1s 0.6s ease both;
-  ">
+  " autoplay loop muted playsinline></video>
 </div>
+<script>
 /* Stars */
 const starsEl=document.getElementById('stars');
 for(let i=0;i<60;i++){
@@ -132,6 +134,7 @@ function openEnvelope(){
   setTimeout(()=>{showScene('scene2');initNo();},800);
 }
 
+/* "No" button */
 const btnNo=document.getElementById('btnNo');
 const msgs=["Hayır","Hayır","Hayır","Hayır","Hayır"];
 let noCount=0,noX=0,noY=0;
@@ -181,6 +184,7 @@ function sayYes(){
   hearts();
 }
 
+/* ── Yurakchalar: pastdan tepaga ── */
 function hearts(){
   const container=document.getElementById('fw');
   const heartChars=['♥','❤','♡','💗','💓'];
